@@ -7,4 +7,8 @@ class ContaBonificada extends Conta {
         super.creditar(valor * 1.1);
     }
 
+    toString() {
+        return `{Conta bonificada: ${super.numero} | saldo: ${super.saldo}}`;
+    }
+
 }

@@ -44,9 +44,10 @@ class ContaController {
         this.inserirContaNoHTML(conta, tipoDaConta);
     }
 
-    inserirContaNoHTML(conta, tipoDaConta) {
+    inserirContaNoHTML(conta) {
         const elementoP = document.createElement('p');
-        elementoP.textContent = 'Conta ' + conta.numero + ': ' + conta.saldo;
+        // cada classe tem o seu toString (textContent vai ser exatamente ele)
+        elementoP.textContent = conta;
         const botaoApagar = document.createElement('button');
         botaoApagar.textContent = 'X';
 
